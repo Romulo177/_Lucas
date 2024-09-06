@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #ff9988;
+            color: white;
+        }
+
+        .container {
+            margin-top: 50px;
+            position: relative; 
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-right: 120px;
+        }
+  
+        .buttons button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border: none;
+            border-radius: 30px;
+            margin: 15px;
+            transition: all 0.3s ease;
+            
+            
+    
+        }
+
+        #sim {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #sim:hover {
+            background-color: #218838;
+        }
+
+        #nao {
+            background-color: #dc3532;
+            color: white;
+            position: absolute; /
+        }
+
+        #nao:hover {
+            background-color: #c82333;
+        }
+
+        /* Estilo da área da imagem */
+        .image-container {
+            margin: 30px 0;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+        }
+
+        .hearts {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Você quer namorar comigo?</h1>
+
+   
+    <div class="image-container">
+        <img src="lucasgos.jpeg" alt="Sua foto aqui">
+    </div>
+
+    
+    <div class="hearts">
+        ❤️ 💖 💕 💘 💓 💞 💝
+    </div>
+
+   
+    <div class="buttons">
+        <button id="sim">Sim</button>
+        <button id="nao">Não</button>
+    </div>
+</div>
+
+<script>
+    const botaoNao = document.getElementById('nao');
+
+    botaoNao.addEventListener('mouseenter', () => {
+       
+        const novaPosicaoX = Math.random() * (window.innerWidth - botaoNao.offsetWidth);
+        const novaPosicaoY = Math.random() * (window.innerHeight - botaoNao.offsetHeight);
+
+        
+        botaoNao.style.left = `${novaPosicaoX}px`;
+        botaoNao.style.top = `${novaPosicaoY}px`;
+    });
+</script>
+
+</body>
+</html>
